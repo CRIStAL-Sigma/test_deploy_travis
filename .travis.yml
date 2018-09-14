@@ -1,0 +1,22 @@
+language: generic
+sudo: require
+matrix:
+  include:
+  - os: linux
+install:
+- ". ./scripts/ensure_latex.sh"
+- "./scripts/ensure_book_dependencies.sh"
+script:
+- cd tex
+- pdflatex draft.tex
+- cd ..
+deploy:
+  skip_cleanup: true
+  provider: releases
+
+  api_key:
+    secure: 
+  file: tex/draft.pdf
+  on:
+    repo: CRIStAL-Sigma/test_deploy_travis
+    tags: true
