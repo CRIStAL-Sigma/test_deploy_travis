@@ -1,6 +1,14 @@
 \documentclass{article}
 
 \usepackage{amsfonts,amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\hypersetup{
+	breaklinks=true,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue
+}
+\usepackage{natbib}
 
 \begin{document}
 
@@ -11,21 +19,35 @@
 \title{Notes
 }
 
-\author{AEREZRezr}
+\author{AZERTY}
 
 
 % \date{Dernière compilation le \today}
 
-\date{
-   Last compilation \today
-      }
+\date{Last compilation \today}
 
 \maketitle
 \abstract{Blabla}
 
+\section{Equation} % (fold)
+\label{sec:equation}
+
 	\begin{equation}
-	    K(x,y) = \frac{1}{x^2+y^2}
+		\label{eq:equation1}
+	  a^2 + b^2 = c^2
 	\end{equation}
 
+	In \eqref{eq:equation1}
+% section equation (end)
+
+\section{Citation} % (fold)
+\label{sec:citation}
+	
+	\cite{python}
+	
+% section citation (end)
+
+\bibliographystyle{plainnat}
+\bibliography{bib_file}
 
 \end{document}
