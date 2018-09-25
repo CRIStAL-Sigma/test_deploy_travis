@@ -8,7 +8,7 @@ install:
 - "./scripts/ensure_book_dependencies.sh"
 script:
 - cd tex
-- pdflatex draft.tex
+- travis_retry pdflatex draft.tex
 - cd ..
 deploy:
   skip_cleanup: true
